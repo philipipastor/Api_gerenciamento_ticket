@@ -25,9 +25,41 @@ export class Database{
         this.#persist()
     }
 
-    select(table){
+    select(table, filters){
         let data = this.#database[table] ?? []
+
+        if(filters){
+            data = data.filter((ticketRow) => {
+                return Object.entries(filters).some(([key,value]) => {
+                    return ticketRow[key].toLowerCase().includes(value.toLowerCase())
+                })
+            })
+        }
+
         return data
+    }
+
+    update(table,id,data){
+        const rowIndex = this.#database[table].findIndex((row) => row.id === id)
+        
+        if(rowIndex > -1) {
+            this.#database[table][rowIndex] = {
+                ...this.#database[table][rowIndex],
+                ...data
+            }
+        }
+
+        this.#persist()
+    }
+
+    remove(table, id){
+        const rowIndex = this.#database[table].findIndex((row) => row.id === id)
+        if(rowIndex > -1){
+            this.#database[table].splice(rowIndex, 1)
+            this.#persist
+        }
+
+        this.#persist()
     }
 
 }
