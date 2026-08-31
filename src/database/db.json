@@ -1,22 +1,13 @@
 {
     "tickets": [
         {
-            "id": "188e683b-e5c7-4dce-a4fb-96a62afd9f09",
-            "equipment": "Computer",
-            "description": "Limpeza de computador",
-            "user_name": "philipi",
-            "status": "open",
-            "create_at": "2026-08-28T19:34:52.867Z",
-            "update_at": "2026-08-28T19:34:52.867Z"
-        },
-        {
-            "id": "ecfcb2f1-132f-471a-b33b-c811ed78a38f",
-            "equipment": "Computer",
-            "description": "Limpeza de computador",
-            "user_name": "philipi",
-            "status": "open",
-            "create_at": "2026-08-28T19:54:06.191Z",
-            "update_at": "2026-08-28T19:54:06.191Z"
+            "id": "ef1215bd-22f5-413a-bdf8-237860744998",
+            "description": "switch ruim",
+            "user_name": "teste",
+            "status": "closed",
+            "create_at": "2026-08-31T17:08:38.867Z",
+            "update_at": "2026-08-31T19:34:11.375Z",
+            "solution": "foi trocado o switch da tecla WASD"
         }
     ]
 }
